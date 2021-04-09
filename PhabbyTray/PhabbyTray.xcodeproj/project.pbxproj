@@ -1,0 +1,769 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		152D116568D8FD4AD3790E8C /* Pods_PhabbyTray_PhabbyTrayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A81D4E414342D38A201FA5D8 /* Pods_PhabbyTray_PhabbyTrayUITests.framework */; };
+		397AC596F39A516045DCF9E4 /* Pods_PhabbyTray.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C4FB7BF136E3D10E51CE23C /* Pods_PhabbyTray.framework */; };
+		9BED6B232620C4CF00BAAD5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED6B222620C4CF00BAAD5A /* AppDelegate.swift */; };
+		9BED6B252620C4CF00BAAD5A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED6B242620C4CF00BAAD5A /* ContentView.swift */; };
+		9BED6B272620C4D100BAAD5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BED6B262620C4D100BAAD5A /* Assets.xcassets */; };
+		9BED6B2A2620C4D100BAAD5A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BED6B292620C4D100BAAD5A /* Preview Assets.xcassets */; };
+		9BED6B2D2620C4D100BAAD5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BED6B2B2620C4D100BAAD5A /* Main.storyboard */; };
+		9BED6B392620C4D100BAAD5A /* PhabbyTrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED6B382620C4D100BAAD5A /* PhabbyTrayTests.swift */; };
+		9BED6B442620C4D100BAAD5A /* PhabbyTrayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED6B432620C4D100BAAD5A /* PhabbyTrayUITests.swift */; };
+		9BED6B552620CFF200BAAD5A /* PhabStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED6B542620CFF200BAAD5A /* PhabStatus.swift */; };
+		9BED6B562620CFF200BAAD5A /* PhabStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED6B542620CFF200BAAD5A /* PhabStatus.swift */; };
+		9BED6B652620DC8F00BAAD5A /* Conduit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED6B642620DC8F00BAAD5A /* Conduit.swift */; };
+		E028F3FD264EAB4C13B66741 /* Pods_PhabbyTrayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE762D8DEBA60D9FACCE46C /* Pods_PhabbyTrayTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9BED6B352620C4D100BAAD5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BED6B172620C4CF00BAAD5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BED6B1E2620C4CF00BAAD5A;
+			remoteInfo = PhabbyTray;
+		};
+		9BED6B402620C4D100BAAD5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BED6B172620C4CF00BAAD5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BED6B1E2620C4CF00BAAD5A;
+			remoteInfo = PhabbyTray;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1CE762D8DEBA60D9FACCE46C /* Pods_PhabbyTrayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhabbyTrayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		240C1356334BAEE79293C1FE /* Pods-PhabbyTray.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhabbyTray.debug.xcconfig"; path = "Target Support Files/Pods-PhabbyTray/Pods-PhabbyTray.debug.xcconfig"; sourceTree = "<group>"; };
+		3ACF0C05DFE285BBABB271AC /* Pods-PhabbyTray.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhabbyTray.release.xcconfig"; path = "Target Support Files/Pods-PhabbyTray/Pods-PhabbyTray.release.xcconfig"; sourceTree = "<group>"; };
+		67A6252D5D4AAC2A4980F7DD /* Pods-PhabbyTrayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhabbyTrayTests.release.xcconfig"; path = "Target Support Files/Pods-PhabbyTrayTests/Pods-PhabbyTrayTests.release.xcconfig"; sourceTree = "<group>"; };
+		67D5007F924DAEA05D55FFB4 /* Pods-PhabbyTray-PhabbyTrayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhabbyTray-PhabbyTrayUITests.release.xcconfig"; path = "Target Support Files/Pods-PhabbyTray-PhabbyTrayUITests/Pods-PhabbyTray-PhabbyTrayUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7C4FB7BF136E3D10E51CE23C /* Pods_PhabbyTray.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhabbyTray.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91CECD7D6E6A7E82842BED04 /* Pods-PhabbyTrayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhabbyTrayTests.debug.xcconfig"; path = "Target Support Files/Pods-PhabbyTrayTests/Pods-PhabbyTrayTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9BED6B1F2620C4CF00BAAD5A /* PhabbyTray.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhabbyTray.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BED6B222620C4CF00BAAD5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9BED6B242620C4CF00BAAD5A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9BED6B262620C4D100BAAD5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9BED6B292620C4D100BAAD5A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9BED6B2C2620C4D100BAAD5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9BED6B2E2620C4D100BAAD5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BED6B2F2620C4D100BAAD5A /* PhabbyTray.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PhabbyTray.entitlements; sourceTree = "<group>"; };
+		9BED6B342620C4D100BAAD5A /* PhabbyTrayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhabbyTrayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BED6B382620C4D100BAAD5A /* PhabbyTrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhabbyTrayTests.swift; sourceTree = "<group>"; };
+		9BED6B3A2620C4D100BAAD5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BED6B3F2620C4D100BAAD5A /* PhabbyTrayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhabbyTrayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BED6B432620C4D100BAAD5A /* PhabbyTrayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhabbyTrayUITests.swift; sourceTree = "<group>"; };
+		9BED6B452620C4D100BAAD5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BED6B542620CFF200BAAD5A /* PhabStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhabStatus.swift; sourceTree = "<group>"; };
+		9BED6B642620DC8F00BAAD5A /* Conduit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conduit.swift; sourceTree = "<group>"; };
+		A81D4E414342D38A201FA5D8 /* Pods_PhabbyTray_PhabbyTrayUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhabbyTray_PhabbyTrayUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C834C6C3D51445C665DF1E3F /* Pods-PhabbyTray-PhabbyTrayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhabbyTray-PhabbyTrayUITests.debug.xcconfig"; path = "Target Support Files/Pods-PhabbyTray-PhabbyTrayUITests/Pods-PhabbyTray-PhabbyTrayUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9BED6B1C2620C4CF00BAAD5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				397AC596F39A516045DCF9E4 /* Pods_PhabbyTray.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BED6B312620C4D100BAAD5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E028F3FD264EAB4C13B66741 /* Pods_PhabbyTrayTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BED6B3C2620C4D100BAAD5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				152D116568D8FD4AD3790E8C /* Pods_PhabbyTray_PhabbyTrayUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D37FEA915AEFB13CF0864B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				240C1356334BAEE79293C1FE /* Pods-PhabbyTray.debug.xcconfig */,
+				3ACF0C05DFE285BBABB271AC /* Pods-PhabbyTray.release.xcconfig */,
+				C834C6C3D51445C665DF1E3F /* Pods-PhabbyTray-PhabbyTrayUITests.debug.xcconfig */,
+				67D5007F924DAEA05D55FFB4 /* Pods-PhabbyTray-PhabbyTrayUITests.release.xcconfig */,
+				91CECD7D6E6A7E82842BED04 /* Pods-PhabbyTrayTests.debug.xcconfig */,
+				67A6252D5D4AAC2A4980F7DD /* Pods-PhabbyTrayTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		88C32E95BD943303BC34FE05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C4FB7BF136E3D10E51CE23C /* Pods_PhabbyTray.framework */,
+				A81D4E414342D38A201FA5D8 /* Pods_PhabbyTray_PhabbyTrayUITests.framework */,
+				1CE762D8DEBA60D9FACCE46C /* Pods_PhabbyTrayTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9BED6B162620C4CF00BAAD5A = {
+			isa = PBXGroup;
+			children = (
+				9BED6B212620C4CF00BAAD5A /* PhabbyTray */,
+				9BED6B372620C4D100BAAD5A /* PhabbyTrayTests */,
+				9BED6B422620C4D100BAAD5A /* PhabbyTrayUITests */,
+				9BED6B202620C4CF00BAAD5A /* Products */,
+				4D37FEA915AEFB13CF0864B3 /* Pods */,
+				88C32E95BD943303BC34FE05 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9BED6B202620C4CF00BAAD5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9BED6B1F2620C4CF00BAAD5A /* PhabbyTray.app */,
+				9BED6B342620C4D100BAAD5A /* PhabbyTrayTests.xctest */,
+				9BED6B3F2620C4D100BAAD5A /* PhabbyTrayUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9BED6B212620C4CF00BAAD5A /* PhabbyTray */ = {
+			isa = PBXGroup;
+			children = (
+				9BED6B222620C4CF00BAAD5A /* AppDelegate.swift */,
+				9BED6B242620C4CF00BAAD5A /* ContentView.swift */,
+				9BED6B262620C4D100BAAD5A /* Assets.xcassets */,
+				9BED6B2B2620C4D100BAAD5A /* Main.storyboard */,
+				9BED6B2E2620C4D100BAAD5A /* Info.plist */,
+				9BED6B2F2620C4D100BAAD5A /* PhabbyTray.entitlements */,
+				9BED6B282620C4D100BAAD5A /* Preview Content */,
+				9BED6B542620CFF200BAAD5A /* PhabStatus.swift */,
+				9BED6B642620DC8F00BAAD5A /* Conduit.swift */,
+			);
+			path = PhabbyTray;
+			sourceTree = "<group>";
+		};
+		9BED6B282620C4D100BAAD5A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9BED6B292620C4D100BAAD5A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9BED6B372620C4D100BAAD5A /* PhabbyTrayTests */ = {
+			isa = PBXGroup;
+			children = (
+				9BED6B382620C4D100BAAD5A /* PhabbyTrayTests.swift */,
+				9BED6B3A2620C4D100BAAD5A /* Info.plist */,
+			);
+			path = PhabbyTrayTests;
+			sourceTree = "<group>";
+		};
+		9BED6B422620C4D100BAAD5A /* PhabbyTrayUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9BED6B432620C4D100BAAD5A /* PhabbyTrayUITests.swift */,
+				9BED6B452620C4D100BAAD5A /* Info.plist */,
+			);
+			path = PhabbyTrayUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9BED6B1E2620C4CF00BAAD5A /* PhabbyTray */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BED6B482620C4D100BAAD5A /* Build configuration list for PBXNativeTarget "PhabbyTray" */;
+			buildPhases = (
+				E5384ED74E8297C50BA3F41C /* [CP] Check Pods Manifest.lock */,
+				9BED6B1B2620C4CF00BAAD5A /* Sources */,
+				9BED6B1C2620C4CF00BAAD5A /* Frameworks */,
+				9BED6B1D2620C4CF00BAAD5A /* Resources */,
+				BDB583C45278517693091D34 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhabbyTray;
+			productName = PhabbyTray;
+			productReference = 9BED6B1F2620C4CF00BAAD5A /* PhabbyTray.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9BED6B332620C4D100BAAD5A /* PhabbyTrayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BED6B4B2620C4D100BAAD5A /* Build configuration list for PBXNativeTarget "PhabbyTrayTests" */;
+			buildPhases = (
+				64E1F1C041A3E41BF4CF753E /* [CP] Check Pods Manifest.lock */,
+				9BED6B302620C4D100BAAD5A /* Sources */,
+				9BED6B312620C4D100BAAD5A /* Frameworks */,
+				9BED6B322620C4D100BAAD5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BED6B362620C4D100BAAD5A /* PBXTargetDependency */,
+			);
+			name = PhabbyTrayTests;
+			productName = PhabbyTrayTests;
+			productReference = 9BED6B342620C4D100BAAD5A /* PhabbyTrayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9BED6B3E2620C4D100BAAD5A /* PhabbyTrayUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BED6B4E2620C4D100BAAD5A /* Build configuration list for PBXNativeTarget "PhabbyTrayUITests" */;
+			buildPhases = (
+				3CE51BFD6F2A45958C41F22E /* [CP] Check Pods Manifest.lock */,
+				9BED6B3B2620C4D100BAAD5A /* Sources */,
+				9BED6B3C2620C4D100BAAD5A /* Frameworks */,
+				9BED6B3D2620C4D100BAAD5A /* Resources */,
+				C9560522DAA71C87431F210A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BED6B412620C4D100BAAD5A /* PBXTargetDependency */,
+			);
+			name = PhabbyTrayUITests;
+			productName = PhabbyTrayUITests;
+			productReference = 9BED6B3F2620C4D100BAAD5A /* PhabbyTrayUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9BED6B172620C4CF00BAAD5A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					9BED6B1E2620C4CF00BAAD5A = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					9BED6B332620C4D100BAAD5A = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 9BED6B1E2620C4CF00BAAD5A;
+					};
+					9BED6B3E2620C4D100BAAD5A = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 9BED6B1E2620C4CF00BAAD5A;
+					};
+				};
+			};
+			buildConfigurationList = 9BED6B1A2620C4CF00BAAD5A /* Build configuration list for PBXProject "PhabbyTray" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9BED6B162620C4CF00BAAD5A;
+			productRefGroup = 9BED6B202620C4CF00BAAD5A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9BED6B1E2620C4CF00BAAD5A /* PhabbyTray */,
+				9BED6B332620C4D100BAAD5A /* PhabbyTrayTests */,
+				9BED6B3E2620C4D100BAAD5A /* PhabbyTrayUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9BED6B1D2620C4CF00BAAD5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BED6B2D2620C4D100BAAD5A /* Main.storyboard in Resources */,
+				9BED6B2A2620C4D100BAAD5A /* Preview Assets.xcassets in Resources */,
+				9BED6B272620C4D100BAAD5A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BED6B322620C4D100BAAD5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BED6B3D2620C4D100BAAD5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3CE51BFD6F2A45958C41F22E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhabbyTray-PhabbyTrayUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64E1F1C041A3E41BF4CF753E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhabbyTrayTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDB583C45278517693091D34 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhabbyTray/Pods-PhabbyTray-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhabbyTray/Pods-PhabbyTray-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhabbyTray/Pods-PhabbyTray-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9560522DAA71C87431F210A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhabbyTray-PhabbyTrayUITests/Pods-PhabbyTray-PhabbyTrayUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhabbyTray-PhabbyTrayUITests/Pods-PhabbyTray-PhabbyTrayUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhabbyTray-PhabbyTrayUITests/Pods-PhabbyTray-PhabbyTrayUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5384ED74E8297C50BA3F41C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhabbyTray-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9BED6B1B2620C4CF00BAAD5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BED6B552620CFF200BAAD5A /* PhabStatus.swift in Sources */,
+				9BED6B252620C4CF00BAAD5A /* ContentView.swift in Sources */,
+				9BED6B652620DC8F00BAAD5A /* Conduit.swift in Sources */,
+				9BED6B232620C4CF00BAAD5A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BED6B302620C4D100BAAD5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BED6B562620CFF200BAAD5A /* PhabStatus.swift in Sources */,
+				9BED6B392620C4D100BAAD5A /* PhabbyTrayTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BED6B3B2620C4D100BAAD5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BED6B442620C4D100BAAD5A /* PhabbyTrayUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9BED6B362620C4D100BAAD5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BED6B1E2620C4CF00BAAD5A /* PhabbyTray */;
+			targetProxy = 9BED6B352620C4D100BAAD5A /* PBXContainerItemProxy */;
+		};
+		9BED6B412620C4D100BAAD5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BED6B1E2620C4CF00BAAD5A /* PhabbyTray */;
+			targetProxy = 9BED6B402620C4D100BAAD5A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9BED6B2B2620C4D100BAAD5A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BED6B2C2620C4D100BAAD5A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9BED6B462620C4D100BAAD5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9BED6B472620C4D100BAAD5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		9BED6B492620C4D100BAAD5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 240C1356334BAEE79293C1FE /* Pods-PhabbyTray.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PhabbyTray/PhabbyTray.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"PhabbyTray/Preview Content\"";
+				DEVELOPMENT_TEAM = QULY83UL7U;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = PhabbyTray/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tonyx.phabby.PhabbyTray;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		9BED6B4A2620C4D100BAAD5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3ACF0C05DFE285BBABB271AC /* Pods-PhabbyTray.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PhabbyTray/PhabbyTray.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"PhabbyTray/Preview Content\"";
+				DEVELOPMENT_TEAM = QULY83UL7U;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = PhabbyTray/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tonyx.phabby.PhabbyTray;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		9BED6B4C2620C4D100BAAD5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91CECD7D6E6A7E82842BED04 /* Pods-PhabbyTrayTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QULY83UL7U;
+				INFOPLIST_FILE = PhabbyTrayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tonyx.phabby.PhabbyTrayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhabbyTray.app/Contents/MacOS/PhabbyTray";
+			};
+			name = Debug;
+		};
+		9BED6B4D2620C4D100BAAD5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67A6252D5D4AAC2A4980F7DD /* Pods-PhabbyTrayTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QULY83UL7U;
+				INFOPLIST_FILE = PhabbyTrayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tonyx.phabby.PhabbyTrayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhabbyTray.app/Contents/MacOS/PhabbyTray";
+			};
+			name = Release;
+		};
+		9BED6B4F2620C4D100BAAD5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C834C6C3D51445C665DF1E3F /* Pods-PhabbyTray-PhabbyTrayUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QULY83UL7U;
+				INFOPLIST_FILE = PhabbyTrayUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tonyx.phabby.PhabbyTrayUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = PhabbyTray;
+			};
+			name = Debug;
+		};
+		9BED6B502620C4D100BAAD5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67D5007F924DAEA05D55FFB4 /* Pods-PhabbyTray-PhabbyTrayUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QULY83UL7U;
+				INFOPLIST_FILE = PhabbyTrayUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tonyx.phabby.PhabbyTrayUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = PhabbyTray;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9BED6B1A2620C4CF00BAAD5A /* Build configuration list for PBXProject "PhabbyTray" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BED6B462620C4D100BAAD5A /* Debug */,
+				9BED6B472620C4D100BAAD5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BED6B482620C4D100BAAD5A /* Build configuration list for PBXNativeTarget "PhabbyTray" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BED6B492620C4D100BAAD5A /* Debug */,
+				9BED6B4A2620C4D100BAAD5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BED6B4B2620C4D100BAAD5A /* Build configuration list for PBXNativeTarget "PhabbyTrayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BED6B4C2620C4D100BAAD5A /* Debug */,
+				9BED6B4D2620C4D100BAAD5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BED6B4E2620C4D100BAAD5A /* Build configuration list for PBXNativeTarget "PhabbyTrayUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BED6B4F2620C4D100BAAD5A /* Debug */,
+				9BED6B502620C4D100BAAD5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9BED6B172620C4CF00BAAD5A /* Project object */;
+}

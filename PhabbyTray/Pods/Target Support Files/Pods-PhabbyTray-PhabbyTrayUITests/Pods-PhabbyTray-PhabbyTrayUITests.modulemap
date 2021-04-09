@@ -1,0 +1,6 @@
+framework module Pods_PhabbyTray_PhabbyTrayUITests {
+  umbrella header "Pods-PhabbyTray-PhabbyTrayUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
