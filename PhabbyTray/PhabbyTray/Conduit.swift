@@ -14,17 +14,28 @@ struct PhabUser {
     let phabId: String
 }
 
-enum DifferentialStatus {
-    case Open
-    case Accepted
-    case Published
+public extension NSDate {
+    func timeAgoDisplay() -> String {
+        let formatter = RelativeDateTimeFormatter()
+        formatter.unitsStyle = .full
+        return formatter.localizedString(for: self as Date, relativeTo: Date())
+    }
+}
+
+public extension Date {
+    func timeAgoDisplay() -> String {
+        let formatter = RelativeDateTimeFormatter()
+        formatter.unitsStyle = .full
+        return formatter.localizedString(for: self, relativeTo: Date())
+    }
 }
 
 struct Differential {
     let id: Int64
     let url: String
     let title: String
-    let status: DifferentialStatus
+    let dateCreated: NSDate
+    let dateModified: NSDate
 }
 
 class ConduitUrl {
@@ -83,9 +94,13 @@ public class ConduitAPI {
                                         if let id = diff["id"] as? Int64,
                                            let fields = diff["fields"] as? [String: Any],
                                            let title = fields["title"] as? String,
-                                           let url = fields["uri"] as? String {
+                                           let url = fields["uri"] as? String,
+                                           let dateCreated = fields["dateCreated"] as? Double,
+                                           let dateModified = fields["dateModified"] as? Double
+                                           {
                                             newDiffs.append(Differential(id: id, url: url, title: title,
-                                                                         status: DifferentialStatus.Open))
+                                                                         dateCreated: NSDate(timeIntervalSince1970: dateCreated),
+                                                                         dateModified: NSDate(timeIntervalSince1970: dateModified)))
                                         }
                                     }
                                     observer.onNext(newDiffs)
@@ -141,9 +156,13 @@ public class ConduitAPI {
                                         if let id = diff["id"] as? Int64,
                                            let fields = diff["fields"] as? [String: Any],
                                            let title = fields["title"] as? String,
-                                           let url = fields["uri"] as? String {
+                                           let url = fields["uri"] as? String,
+                                           let dateCreated = fields["dateCreated"] as? Double,
+                                           let dateModified = fields["dateModified"] as? Double
+                                        {
                                             newDiffs.append(Differential(id: id, url: url, title: title,
-                                                                         status: DifferentialStatus.Open))
+                                                                         dateCreated: NSDate(timeIntervalSince1970: dateCreated),
+                                                                         dateModified: NSDate(timeIntervalSince1970: dateModified)))
                                         }
                                     }
                                     observer.onNext(newDiffs)

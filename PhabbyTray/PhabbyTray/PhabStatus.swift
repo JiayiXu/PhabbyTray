@@ -17,3 +17,4 @@ struct PhabStatus {
         return "M:\(numMydiffs) R:\(numReviewerDiffs) S:\(subscribedDiffs)"
     }
 }
+
