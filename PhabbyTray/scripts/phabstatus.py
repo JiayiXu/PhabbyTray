@@ -21,8 +21,10 @@ def run(args):
     print("user_name: {}, phid: {}".format(user, phid))
     #search_diffs_for_user(args.api_token, user, "published")
 
-    diff_info_list = search_diffs_for_user(args.api_token, user, 'published', args.start_date)
+    diff_info_list = search_diffs_for_user(args.api_token, user, 'published', args.start_date, args.end_date)
     print("total diffs: {}".format(len(diff_info_list)))
+    for diff in diff_info_list:
+        print("{}".format(diff[0]))
 
     close_time = np.array([diff[2] - diff[1] for diff in diff_info_list])
     print(close_time)
@@ -40,13 +42,16 @@ def run(args):
 def seconds_to_hours(seconds):
     return seconds / 3600.0
 
-def search_diffs_for_user(api_token, user, status, start_date=None):
+def search_diffs_for_user(api_token, user, status, start_date=None, end_date=None):
     data = {'api.token': api_token,
             'constraints[authorPHIDs][0]': user,
             'constraints[statuses][0]': status
     }
     if start_date:
         data['constraints[createdStart]'] = int(datetime.datetime.strptime(start_date, "%Y/%m/%d").timestamp())
+
+    if end_date:
+        data['constraints[createdEnd]'] = int(datetime.datetime.strptime(end_date, "%Y/%m/%d").timestamp())
 
     res = requests.post(DIFF_SEARCH_URL,
         data = data)
@@ -80,5 +85,6 @@ if __name__ == "__main__":
     parser.add_argument('-t', '--api_token', required=True, help='Phab API token. Find it in https://phabricator.dropboxer.net/settings/user/<user_name>/page/apitokens/')
     parser.add_argument('-u', '--user', help='Query user')
     parser.add_argument('-s', '--start_date', help='Start date. yyyy/mm/dd')
+    parser.add_argument('-e', '--end_date', help='End date. yyyy/mm/dd')
     args = parser.parse_args()
     run(args)
