@@ -10,6 +10,46 @@ WHOAMI_URL = BASE_URL + "/user.whoami"
 DIFF_SEARCH_URL = BASE_URL + "/differential.revision.search"
 USER_SERACH_URL = BASE_URL + "/user.search"
 
+# Company holidays and public holidays
+KNOWN_HOLIDAYS = set([
+    "01/03/2022",
+    "01/14/2022",
+    "02/11/2022",
+    "03/17/2022",
+    "03/18/2022",
+    "04/01/2022",
+    "05/02/2022",
+    "05/27/2022",
+    "06/06/2022",
+    "06/17/2022",
+    "07/01/2022",
+    "08/01/2022",
+    "08/26/2022",
+    "09/02/2022",
+    "10/07/2022",
+    "10/31/2022",
+    "11/11/2022",
+    "12/25/2022",
+    "12/26/2022",
+])
+
+def is_holiday(dt):
+    return dt.weekday() > 4 or dt.strftime("%Y/%m/%d") in KNOWN_HOLIDAYS:
+
+
+def delta_between_two_dates(dt1, dt2):
+    # if either dt1 or dt2 is not a business day, return delta directly
+    if is_holiday(dt1) or is_holiday(dt2)：
+        return dt2.timestamp() - dt1.timestamp()
+
+    dates = [dt1 + timedelta(idx + 1)
+             for idx in range((dt2 - dt1).days)]
+
+    print(dates)
+    holidays = [date for d in dates if is_holiday(d)]
+    print("holidays: {}".format(dates))
+
+    return dt2.timestamp() - dt1.timestamp() - 24 * 3600 * len(dates)
 
 def run(args):
     user = args.user
