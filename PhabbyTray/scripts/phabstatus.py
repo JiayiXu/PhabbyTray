@@ -34,22 +34,20 @@ KNOWN_HOLIDAYS = set([
 ])
 
 def is_holiday(dt):
-    return dt.weekday() > 4 or dt.strftime("%Y/%m/%d") in KNOWN_HOLIDAYS:
+    return dt.weekday() > 4 or dt.strftime("%m/%d/%Y") in KNOWN_HOLIDAYS
 
 
 def delta_between_two_dates(dt1, dt2):
     # if either dt1 or dt2 is not a business day, return delta directly
-    if is_holiday(dt1) or is_holiday(dt2)：
+    #import pdb;pdb.set_trace()
+    if is_holiday(dt1) or is_holiday(dt2):
         return dt2.timestamp() - dt1.timestamp()
 
-    dates = [dt1 + timedelta(idx + 1)
+    dates = [dt1 + datetime.timedelta(idx + 1)
              for idx in range((dt2 - dt1).days)]
 
-    print(dates)
-    holidays = [date for d in dates if is_holiday(d)]
-    print("holidays: {}".format(dates))
-
-    return dt2.timestamp() - dt1.timestamp() - 24 * 3600 * len(dates)
+    holidays = [d for d in dates if is_holiday(d)]
+    return dt2.timestamp() - dt1.timestamp() - 24 * 3600 * len(holidays)
 
 def run(args):
     user = args.user
@@ -66,7 +64,10 @@ def run(args):
     for diff in diff_info_list:
         print("{}".format(diff[0]))
 
-    close_time = np.array([diff[2] - diff[1] for diff in diff_info_list])
+    close_time = np.array([
+        delta_between_two_dates(datetime.datetime.fromtimestamp(diff[1]), datetime.datetime.fromtimestamp(diff[2]))
+        for diff in diff_info_list]
+    )
     print(close_time)
     print("50 {}".format(np.percentile(close_time, 50)))
     close_time_50 = np.percentile(close_time, 50)
@@ -76,7 +77,7 @@ def run(args):
         seconds_to_hours(close_time_50), seconds_to_hours(close_time_75), seconds_to_hours(close_time_90)))
     print("last 10:")
     for diff in diff_info_list:
-        if diff[2] - diff[1] > close_time_90:
+        if delta_between_two_dates(datetime.datetime.fromtimestamp(diff[1]), datetime.datetime.fromtimestamp(diff[2])) > close_time_90:
             print("{}".format(diff[0]))
 
 def seconds_to_hours(seconds):
